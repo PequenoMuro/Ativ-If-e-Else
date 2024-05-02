@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medir Tempartura</title>
+    <style>
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    background: url(fundo.jpg);
+    background-size: cover;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+::selection {
+  background-color: gray;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 400px;
+  height: 400px;
+  background-image: transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.title {
+  color: white;
+  margin: 3rem 0;
+  font-size: 2rem;
+}
+
+.input {
+  margin: 0.5rem 0;
+  padding: 1rem 0.5rem;
+  width: 20rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.input::placeholder{
+    color:white
+}
+
+.username {
+  border-bottom: 1px solid white;
+  transition: all 400ms;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+.btn {
+  height: 3rem;
+  width: 20rem;
+  margin-top:60px;
+  margin-bottom:20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  border: none;
+  color:rgb(0, 0, 0);
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  
+}
+
+.btn:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: none;
+  color:rgb(0, 0, 0);
+  box-shadow: 0 0 10px  antiquewhite, 0 0 10px antiquewhite;
+}
+
+.btn:active {
+    transition: all 0.2s;
+  background-color: rgb(36, 36, 36);
+  box-shadow: none;
+  color:rgb(255, 255, 255);
+  box-shadow: 0 0 10px  rgb(0, 0, 0), 0 0 10px antiquewhite;
+}
+
+
+
+
+    
+    
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form class="form" action="script.php" method="POST">
+            <p class="title"><b style="font-size: 25px">Medidor de Temperatura</b></p>
+            <input placeholder="Insira a Temperatura" class="username input" type="text" name="temperatura" id="temperatura">
+            
+            
+            <button class="btn" value="Medir" type="submit">Medir</button>
+            
+        </form>
+    </div>
+    
+
+
+</body>
+</html>
